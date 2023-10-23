@@ -7,7 +7,7 @@ MyServer::MyServer(QObject *parent) : QTcpServer(parent)
 
 void MyServer::StartServer()
 {
-    if (listen(QHostAddress::Any,80))
+    if (listen(QHostAddress::Any,1999))
         {
         qDebug() << "started...";
         }
@@ -17,7 +17,7 @@ void MyServer::StartServer()
     }
 }
 
-void MyServer::incomingConnection(int handle)
+void MyServer::incomingConnection(qintptr handle)
 {
     MyClient *client = new MyClient(this);
     client->SetSocket(handle);

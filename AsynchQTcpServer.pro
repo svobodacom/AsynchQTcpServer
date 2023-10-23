@@ -10,7 +10,8 @@ CONFIG += c++17 cmdline
 SOURCES += \
         main.cpp \
         myclient.cpp \
-        myserver.cpp
+        myserver.cpp \
+        mytask.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -19,4 +20,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     myclient.h \
-    myserver.h
+    myserver.h \
+    mytask.h

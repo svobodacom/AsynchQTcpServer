@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QTcpSocket>
 #include <QThreadPool>
+#include "mytask.h"
 
 class MyClient : public QObject
 {
